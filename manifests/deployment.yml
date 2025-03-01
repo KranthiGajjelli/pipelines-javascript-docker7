@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kranthigajjellipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kranthigajjellipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kranthigajjellipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kranthigajjellipipelinesjavascriptdocker 
+          image: mycontainerregistry1mar25.azurecr.io/kranthigajjellipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
